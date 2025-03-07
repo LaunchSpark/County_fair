@@ -5,7 +5,9 @@ class Attraction:
         self.capacity=capacity
         self.operating_hours=operating_hours
         self.age_restrictions=age_restrictions
-    
+
+
+
     def attracton_name_and_location(self):
         print("the {self.name} attraction is at {self.location}")
         
