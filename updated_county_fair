@@ -1,0 +1,385 @@
+class Attraction:
+    def __init__(self, name, location, capacity, operating_hours, age_restrictions):
+        self.name=name
+        self.location=location
+        self.capacity=capacity
+        self.operating_hours=operating_hours
+        self.age_restrictions=age_restrictions
+
+    def get_name(self):
+        return self._name
+
+    def set_name(self, name):
+        self._name = name
+
+    def get_location(self):
+        return self._location
+
+    def set_location(self, location):
+        self._location = location
+
+    def get_capacity(self):
+        return self._capacity
+
+    def set_capacity(self, capacity):
+        self._capacity = capacity
+
+    def get_operating_hours(self):
+        return self._operating_hours
+
+    def set_operating_hours(self, operating_hours):
+        self._operating_hours = operating_hours
+
+    def get_age_restrictions(self):
+        return self._age_restrictions
+
+    def set_age_restrictions(self, age_restrictions):
+        self._age_restrictions = age_restrictions
+    
+    def attracton_name_and_location(self):
+        print("the {self.name} attraction is at {self.location}")
+        
+    def attracton_capacity_and_age_restrictions(self):
+        print("the attraction has {self.capacity} places and the minimum age is {self.age_restrictions}")
+      
+              
+class Show(Attraction):
+    def __init__(self, name, location, capacity, operating_hours, age_restrictions,performances_type, duration, schedule, performer_names): 
+        super().__init__(self, name, location, capacity, operating_hours, age_restrictions)
+        self.performances_type=performances_type
+        self.duration=duration
+        self.schedule=schedule
+        self.performer_names=performer_names
+
+    def get_performance_type(self):
+        return self._performance_type
+
+    def set_performance_type(self, performance_type):
+        self._performance_type = performance_type
+
+    def get_duration(self):
+        return self._duration
+
+    def set_duration(self, duration):
+        self._duration = duration
+
+    def get_schedule(self):
+        return self._schedule
+
+    def set_schedule(self, schedule):
+        self._schedule = schedule
+
+    def get_performer_names(self):
+        return self._performer_names
+
+    def set_performer_names(self, performer_names):
+        self._performer_names = performer_names
+        
+    def date_hours_informations(self):
+        print("the show start {self.schedule} and the duration is {self.duration}")
+     
+             
+class Ride(Attraction):
+    def __init__(self, name, location, capacity, operating_hours, age_restrictions, ride_type, height_requirement, speed, duration): 
+        super().__init__(self, name, location, capacity, operating_hours, age_restrictions)
+        self.ride_type=ride_type
+        self.height_requirement=height_requirement
+        self.speed=speed
+        self.duration=duration
+
+    def get_ride_type(self):
+        return self._ride_type
+
+    def set_ride_type(self, ride_type):
+        self._ride_type = ride_type
+
+    def get_height_requirement(self):
+        return self._height_requirement
+
+    def set_height_requirement(self, height_requirement):
+        self._height_requirement = height_requirement
+
+    def get_speed(self):
+        return self._speed
+
+    def set_speed(self, speed):
+        self._speed = speed
+
+    def get_duration(self):
+        return self._duration
+
+    def set_duration(self, duration):
+        self._duration = duration
+              
+class Booth(Attraction):
+    def __init__(self, name, location, capacity, operating_hours, age_restrictions, booth_type,number_of_workers, product_service_offered, queue_capacity): 
+        super().__init__(self, name, location, capacity, operating_hours, age_restrictions)
+        self.booth_type=booth_type
+        self.number_of_workers=number_of_workers
+        self.product_service_offered=product_service_offered
+        self.queue_capacity=queue_capacity
+
+    def get_booth_type(self):
+        return self._booth_type
+
+    def set_booth_type(self, booth_type):
+        self._booth_type = booth_type
+
+    def get_number_of_workers(self):
+        return self._number_of_workers
+
+    def set_number_of_workers(self, number_of_workers):
+        self._number_of_workers = number_of_workers
+
+    def get_product_service_offered(self):
+        return self._product_service_offered
+
+    def set_product_service_offered(self, product_service_offered):
+        self._product_service_offered = product_service_offered
+
+    def get_queue_capacity(self):
+        return self._queue_capacity
+
+    def set_queue_capacity(self, queue_capacity):
+        self._queue_capacity = queue_capacity
+        
+#############################
+
+
+class Vendor:
+    def __init__(self,name, location, vendor_type, permit_status, revenue):
+        self.name=name
+        self.location=location
+        self.vendor_type=vendor_type
+        self.permit_status=permit_status
+        self.revenue=revenue
+
+    def get_name(self):
+        return self.name
+
+    def set_name(self, name):
+        self.name = name
+
+    def get_location(self):
+        return self.location
+
+    def set_location(self, location):
+        self.location = location
+
+    def get_vendor_type(self):
+        return self.vendor_type
+
+    def set_vendor_type(self, vendor_type):
+        self.vendor_type = vendor_type
+
+    def get_permit_status(self):
+        return self.permit_status
+
+    def set_permit_status(self, permit_status):
+        self.permit_status = permit_status
+
+    def get_revenue(self):
+        return self.revenue
+
+    def set_revenue(self, revenue):
+        self.revenue = revenue
+
+class Food(Vendor):
+    def __init__(self,name, location, vendor_type, permit_status, revenue,cuisine_type,health_inspection_status,menu_offering):
+        super().__init__(self,name, location, vendor_type, permit_status, revenue)
+        self.cuisine_type=cuisine_type
+        self.health_inspection_status=health_inspection_status
+        self.menu_offering=menu_offering
+
+
+    def get_cuisine_type(self):
+        return self.cuisine_type
+
+    def set_cuisine_type(self, cuisine_type):
+        self.cuisine_type = cuisine_type
+
+    def get_health_inspection_status(self):
+        return self.health_inspection_status
+
+    def set_health_inspection_status(self, health_inspection_status):
+        self.health_inspection_status = health_inspection_status
+
+    def get_menu_offering(self):
+        return self.menu_offering
+
+    def set_menu_offering(self, menu_offering):
+        self.menu_offering = menu_offering
+
+class Merchandise(Vendor):
+    def __init__(self,name, location, vendor_type, permit_status, revenue,product_type,stock_quantity,pricing):
+        super().__init__(self,name, location, vendor_type, permit_status, revenue)
+        self.product_type=product_type
+        self.stock_quantity=stock_quantity
+        self.pricing=pricing
+
+    def get_product_type(self):
+        return self.product_type
+
+    def set_product_type(self, product_type):
+        self.product_type = product_type
+
+    def get_stock_quantity(self):
+        return self.stock_quantity
+
+    def set_stock_quantity(self, stock_quantity):
+        self.stock_quantity = stock_quantity
+
+    def get_pricing(self):
+        return self.pricing
+
+    def set_pricing(self, pricing):
+        self.pricing = pricing
+
+class Service(Vendor):
+    def __init__(self,name, location, vendor_type, permit_status, revenue,service_type,required_equipement,staff_count):
+        super().__init__(self,name, location, vendor_type, permit_status, revenue)
+        self.service_type=service_type
+        self.required_equipement=required_equipement
+        self.staff_count=staff_count
+
+    def get_service_type(self):
+        return self.service_type
+
+    def set_service_type(self, service_type):
+        self.service_type = service_type
+
+    def get_required_equipment(self):
+        return self.required_equipment
+
+    def set_required_equipment(self, required_equipment):
+        self.required_equipment = required_equipment
+
+    def get_staff_count(self):
+        return self.staff_count
+
+    def set_staff_count(self, staff_count):
+        self.staff_count = staff_count
+
+class Entertainment(Vendor):
+    def __init__(self,name, location, vendor_type, permit_status, revenue,act_type,performance_duration,audience_capacity):
+        super().__init__(self,name, location, vendor_type, permit_status, revenue)
+        self.act_type=act_type
+        self.performance_duration=performance_duration
+        self.audience_capacity=audience_capacity
+
+    def get_act_type(self):
+        return self.act_type
+
+    def set_act_type(self, act_type):
+        self.act_type = act_type
+
+    def get_performance_duration(self):
+        return self.performance_duration
+
+    def set_performance_duration(self, performance_duration):
+        self.performance_duration = performance_duration
+
+    def get_audience_capacity(self):
+        return self.audience_capacity
+
+    def set_audience_capacity(self, audience_capacity):
+        self.audience_capacity = audience_capacity
+
+#############################
+
+class Map:
+    def __init__(self,layout_design, entry_points, major_attractions, vendor_locations):
+        self.layout_design=layout_design
+        self.entry_points=entry_points
+        self.major_attractions=major_attractions
+        self.vendor_locations=vendor_locations
+
+    def get_layout_design(self):
+        return self.layout_design
+
+    def set_layout_design(self, layout_design):
+        self.layout_design = layout_design
+
+    def get_entry_points(self):
+        return self.entry_points
+
+    def set_entry_points(self, entry_points):
+        self.entry_points = entry_points
+
+    def get_major_attractions(self):
+        return self.major_attractions
+
+    def set_major_attractions(self, major_attractions):
+        self.major_attractions = major_attractions
+
+    def get_vendor_locations(self):
+        return self.vendor_locations
+
+    def set_vendor_locations(self, vendor_locations):
+        self.vendor_locations = vendor_locations
+
+#############################
+
+class Admissions:
+    def __init__(self,ticket_price, payment_methods, daily_visitor_count, pass_options):
+        self.ticket_price=ticket_price
+        self.payment_methods=payment_methods
+        self.daily_visitor_count=daily_visitor_count
+        self.pass_options=pass_options
+
+    def get_ticket_price(self):
+        return self.ticket_price
+
+    def set_ticket_price(self, ticket_price):
+        self.ticket_price = ticket_price
+
+    def get_payment_methods(self):
+        return self.payment_methods
+
+    def set_payment_methods(self, payment_methods):
+        self.payment_methods = payment_methods
+
+    def get_daily_visitor_count(self):
+        return self.daily_visitor_count
+
+    def set_daily_visitor_count(self, daily_visitor_count):
+        self.daily_visitor_count = daily_visitor_count
+
+    def get_pass_options(self):
+        return self.pass_options
+
+    def set_pass_options(self, pass_options):
+        self.pass_options = pass_options
+
+#############################
+
+class Schedule:
+    def __init__(self,event_list, start_times, locations, duration):
+        self.event_list=event_list
+        self.start_times=start_times
+        self.locations=locations
+        self.duration=duration
+
+    def get_event_list(self):
+        return self.event_list
+
+    def set_event_list(self, event_list):
+        self.event_list = event_list
+
+    def get_start_times(self):
+        return self.start_times
+
+    def set_start_times(self, start_times):
+        self.start_times = start_times
+
+    def get_locations(self):
+        return self.locations
+
+    def set_locations(self, locations):
+        self.locations = locations
+
+    def get_duration(self):
+        return self.duration
+
+    def set_duration(self, duration):
+        self.duration = duration
