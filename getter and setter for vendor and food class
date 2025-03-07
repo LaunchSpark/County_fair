@@ -1,0 +1,63 @@
+class Vendor:
+    def __init__(self,name, location, vendor_type, permit_status, revenue):
+        self.name=name
+        self.location=location
+        self.vendor_type=vendor_type
+        self.permit_status=permit_status
+        self.revenue=revenue
+
+    def get_name(self):
+        return self.name
+
+    def set_name(self, name):
+        self.name = name
+
+    def get_location(self):
+        return self.location
+
+    def set_location(self, location):
+        self.location = location
+
+    def get_vendor_type(self):
+        return self.vendor_type
+
+    def set_vendor_type(self, vendor_type):
+        self.vendor_type = vendor_type
+
+    def get_permit_status(self):
+        return self.permit_status
+
+    def set_permit_status(self, permit_status):
+        self.permit_status = permit_status
+
+    def get_revenue(self):
+        return self.revenue
+
+    def set_revenue(self, revenue):
+        self.revenue = revenue
+
+class Food(Vendor):
+    def __init__(self,name, location, vendor_type, permit_status, revenue,cuisine_type,health_inspection_status,menu_offering):
+        super().__init__(self,name, location, vendor_type, permit_status, revenue)
+        self.cuisine_type=cuisine_type
+        self.health_inspection_status=health_inspection_status
+        self.menu_offering=menu_offering
+    
+    
+    def get_cuisine_type(self):
+        return self.cuisine_type
+
+    def set_cuisine_type(self, cuisine_type):
+        self.cuisine_type = cuisine_type
+
+    def get_health_inspection_status(self):
+        return self.health_inspection_status
+
+    def set_health_inspection_status(self, health_inspection_status):
+        self.health_inspection_status = health_inspection_status
+
+    def get_menu_offering(self):
+        return self.menu_offering
+
+    def set_menu_offering(self, menu_offering):
+        self.menu_offering = menu_offering
