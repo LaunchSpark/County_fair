@@ -61,3 +61,97 @@ class Food(Vendor):
 
     def set_menu_offering(self, menu_offering):
         self.menu_offering = menu_offering
+
+
+
+
+
+
+
+
+
+#############################
+
+class Map:
+    def __init__(self,layout_design, entry_points, major_attractions, vendor_locations):
+        self.layout_design=layout_design
+        self.entry_points=entry_points
+        self.major_attractions=major_attractions
+        self.vendor_locations=vendor_locations
+        
+    def get_layout_design(self):
+        return self.layout_design
+    def get_entry_points(self):
+        return self.entry_points
+    def get_major_attractions(self):
+        return self.major_attractions
+    def get_vendor_locations(self):
+        return self.vendor_locations
+    
+    
+    def set_layout_design(self, x):
+        self.layout_design = x
+    def set_entry_points(self, x):
+        self.entry_points = x 
+    def set_major_attractions(self, x):
+        self.major_attractions = x
+    def set_vendor_locations(self, x):
+        self.vendor_locations = x 
+       
+#############################
+
+class Admissions:
+    def __init__(self,ticket_price, payment_methods, daily_visitor_count, pass_options):
+        self.ticket_price=ticket_price
+        self.payment_methods=payment_methods
+        self.daily_visitor_count=daily_visitor_count
+        self.pass_options=pass_options
+    
+    def get_ticket_price(self):
+            return self.ticket_price
+    def get_payment_methods(self):
+            return self.payment_methods
+    def get_daily_visitor_count(self):
+            return self.daily_visitor_count
+    def get_pass_options(self):
+            return self.pass_options
+    
+    
+    def set_ticket_price(self, x):
+            self.ticket_price = x
+    def set_payment_methods(self, x):
+            self.payment_methods = x
+    def set_daily_visitor_count(self, x):
+            self.daily_visitor_count = x
+    def set_pass_options(self, x):
+            self.pass_options = x
+    
+#############################
+
+class Schedule:
+    def __init__(self,event_list, start_times, locations, duration):
+        self.event_list=event_list
+        self.start_times=start_times
+        self.locations=locations
+        self.duration=duration
+        
+        
+    def get_event_list(self):
+        return self.event_list
+    def get_start_times(self):
+        return self.start_times
+    def get_locations(self):
+        return self.locations
+    def get_duration(self):
+        return self.duration
+    
+    
+    def set_event_list(self, x):
+        self.event_list = x
+    def set_start_times(self, x):
+        self.start_times = x
+    def set_locations(self, x):
+        self.locations = x
+    def set_duration(self, x):
+        self.duration = x
+    
