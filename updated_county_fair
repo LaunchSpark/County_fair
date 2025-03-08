@@ -7,34 +7,34 @@ class Attraction:
         self.age_restrictions=age_restrictions
 
     def get_name(self):
-        return self._name
+        return self.name
 
     def set_name(self, name):
-        self._name = name
+        self.name = name
 
     def get_location(self):
-        return self._location
+        return self.location
 
     def set_location(self, location):
-        self._location = location
+        self.location = location
 
     def get_capacity(self):
-        return self._capacity
+        return self.capacity
 
     def set_capacity(self, capacity):
-        self._capacity = capacity
+        self.capacity = capacity
 
     def get_operating_hours(self):
-        return self._operating_hours
+        return self.operating_hours
 
     def set_operating_hours(self, operating_hours):
-        self._operating_hours = operating_hours
+        self.operating_hours = operating_hours
 
     def get_age_restrictions(self):
-        return self._age_restrictions
+        return self.age_restrictions
 
     def set_age_restrictions(self, age_restrictions):
-        self._age_restrictions = age_restrictions
+        self.age_restrictions = age_restrictions
     
     def attracton_name_and_location(self):
         print("the {self.name} attraction is at {self.location}")
@@ -52,28 +52,28 @@ class Show(Attraction):
         self.performer_names=performer_names
 
     def get_performance_type(self):
-        return self._performance_type
+        return self.performance_type
 
     def set_performance_type(self, performance_type):
-        self._performance_type = performance_type
+        self.performance_type = performance_type
 
     def get_duration(self):
-        return self._duration
+        return self.duration
 
     def set_duration(self, duration):
-        self._duration = duration
+        self.duration = duration
 
     def get_schedule(self):
-        return self._schedule
+        return self.schedule
 
     def set_schedule(self, schedule):
-        self._schedule = schedule
+        self.schedule = schedule
 
     def get_performer_names(self):
-        return self._performer_names
+        return self.performer_names
 
     def set_performer_names(self, performer_names):
-        self._performer_names = performer_names
+        self.performer_names = performer_names
         
     def date_hours_informations(self):
         print("the show start {self.schedule} and the duration is {self.duration}")
@@ -88,28 +88,28 @@ class Ride(Attraction):
         self.duration=duration
 
     def get_ride_type(self):
-        return self._ride_type
+        return self.ride_type
 
     def set_ride_type(self, ride_type):
-        self._ride_type = ride_type
+        self.ride_type = ride_type
 
     def get_height_requirement(self):
-        return self._height_requirement
+        return self.height_requirement
 
     def set_height_requirement(self, height_requirement):
-        self._height_requirement = height_requirement
+        self.height_requirement = height_requirement
 
     def get_speed(self):
-        return self._speed
+        return self.speed
 
     def set_speed(self, speed):
-        self._speed = speed
+        self.speed = speed
 
     def get_duration(self):
-        return self._duration
+        return self.duration
 
     def set_duration(self, duration):
-        self._duration = duration
+        self.duration = duration
               
 class Booth(Attraction):
     def __init__(self, name, location, capacity, operating_hours, age_restrictions, booth_type,number_of_workers, product_service_offered, queue_capacity): 
@@ -120,28 +120,28 @@ class Booth(Attraction):
         self.queue_capacity=queue_capacity
 
     def get_booth_type(self):
-        return self._booth_type
+        return self.booth_type
 
     def set_booth_type(self, booth_type):
-        self._booth_type = booth_type
+        self.booth_type = booth_type
 
     def get_number_of_workers(self):
-        return self._number_of_workers
+        return self.number_of_workers
 
     def set_number_of_workers(self, number_of_workers):
-        self._number_of_workers = number_of_workers
+        self.number_of_workers = number_of_workers
 
     def get_product_service_offered(self):
-        return self._product_service_offered
+        return self.product_service_offered
 
     def set_product_service_offered(self, product_service_offered):
-        self._product_service_offered = product_service_offered
+        self.product_service_offered = product_service_offered
 
     def get_queue_capacity(self):
-        return self._queue_capacity
+        return self.queue_capacity
 
     def set_queue_capacity(self, queue_capacity):
-        self._queue_capacity = queue_capacity
+        self.queue_capacity = queue_capacity
         
 #############################
 
